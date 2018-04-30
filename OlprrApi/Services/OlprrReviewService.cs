@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using EntityDto = OlprrApi.Storage.Entities;
-using OlprrApi.Storage.Repositories;
 using AutoMapper;
-using OlprrApi.Models.Request;
-using OlprrApi.Models.Response;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using OlprrApi.Storage.Repositories;
+using RequestDto = OlprrApi.Models.Request;
+using ResponseDto = OlprrApi.Models.Response;
+using EntityDto = OlprrApi.Storage.Entities;
 
 namespace OlprrApi.Services
 {
@@ -21,17 +21,15 @@ namespace OlprrApi.Services
             _lustRepository = lustRepository;
             _mapper = mapper;
         }
-
-
-        public async Task SearchLust(LustSiteAddressSearch lustSiteAddressSearch)
+        public async Task<IEnumerable<ResponseDto.LustSiteAddressSearch>> GetLustSearch(RequestDto.LustSiteAddressSearch lustSiteAddressSearch)
         {
-            //var incident = _mapper.Map<ApOLPRRInsertIncident, EntityDto.ApOLPRRInsertIncident>(apOLPRRInsertIncident);
-            await _lustRepository.GetApOLPRRGetLustLookups(lustSiteAddressSearch);
-        }
-
-        public async Task<IEnumerable<EntityDto.ApOLPRRGetLustLookup>> GetLustSearch(LustSiteAddressSearch lustSiteAddressSearch)
-        {
-            return await _lustRepository.GetLustSearch(lustSiteAddressSearch);
+            var searchFilters = _mapper.Map<RequestDto.LustSiteAddressSearch, EntityDto.LustSiteAddressSearch>(lustSiteAddressSearch);
+            var resultList = new List<ResponseDto.LustSiteAddressSearch>();
+            foreach (var result in await _lustRepository.GetLustSearch(searchFilters))
+            {
+                resultList.Add(_mapper.Map<EntityDto.ApOLPRRGetLustLookup, ResponseDto.LustSiteAddressSearch>(result));
+            }
+            return resultList;
         }
     }
 }

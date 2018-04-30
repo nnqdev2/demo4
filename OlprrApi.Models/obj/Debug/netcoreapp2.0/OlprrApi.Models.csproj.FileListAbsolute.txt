@@ -6,4 +6,3 @@ E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi.Models\obj\Debug\netcoreapp2.0\Olprr
 E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi.Models\obj\Debug\netcoreapp2.0\OlprrApi.Models.AssemblyInfo.cs
 E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi.Models\obj\Debug\netcoreapp2.0\OlprrApi.Models.dll
 E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi.Models\obj\Debug\netcoreapp2.0\OlprrApi.Models.pdb
-E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi.Models\obj\Debug\netcoreapp2.0\OlprrApi.Models.csprojResolveAssemblyReference.cache

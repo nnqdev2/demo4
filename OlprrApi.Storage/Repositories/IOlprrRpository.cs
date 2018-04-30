@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using OlprrApi.Storage.Entities;
-using Dto = OlprrApi.Models.Request;
 
 namespace OlprrApi.Storage.Repositories
 {
@@ -17,9 +16,7 @@ namespace OlprrApi.Storage.Repositories
         Task<IEnumerable<State>> GetStates();
         Task<IEnumerable<StreetTypeT>> GetStreetTypes();
         Task<int> InsertOLPRRIncidentRecord(ApOLPRRInsertIncident apOLPRRInsertIncident);
-        //Task<IEnumerable<ApOLPRRGetLustLookup>> GetApOLPRRGetLustLookups(Dto.LustSiteAddressSearch lustSiteAddressSearch);
-        Task GetApOLPRRGetLustLookups(Dto.LustSiteAddressSearch lustSiteAddressSearch);
-        Task<IEnumerable<ApOLPRRGetLustLookup>> GetLustSearch(Dto.LustSiteAddressSearch lustSiteAddressSearch);
+        Task<IEnumerable<ApOLPRRGetLustLookup>> GetLustSearch(LustSiteAddressSearch lustSiteAddressSearch);
 
     }
 }
