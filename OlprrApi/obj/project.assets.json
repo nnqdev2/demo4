@@ -13414,11 +13414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git\\net\\OlprrApi\\OlprrApi\\OlprrApi.csproj",
+      "projectUniqueName": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi\\OlprrApi.csproj",
       "projectName": "OlprrApi",
-      "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi\\OlprrApi.csproj",
+      "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi\\OlprrApi.csproj",
       "packagesPath": "C:\\Users\\nquan\\.nuget\\packages\\",
-      "outputPath": "E:\\git\\net\\OlprrApi\\OlprrApi\\obj\\",
+      "outputPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13437,14 +13437,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\git\\net\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj": {
-              "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj"
+            "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj": {
+              "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj"
             },
-            "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj": {
-              "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj"
+            "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj": {
+              "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj"
             },
-            "E:\\git\\net\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj": {
-              "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj"
+            "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj": {
+              "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj"
             }
           }
         }

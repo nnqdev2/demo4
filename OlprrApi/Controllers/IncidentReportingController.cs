@@ -2,16 +2,12 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using OlprrApi.Services;
-using OlprrApi.Models;
-using System.IO;
 
 namespace OlprrApi.Controllers
 {
-    [EnableCors("AllowSpecificOrigin")]
-    //[EnableCors("AllowAllHeaders")]
+    //[EnableCors("AllowSpecificOrigin")]
+    [EnableCors("AllowAllHeaders")]
     [Produces("application/json")]
     //[Route("api/OLPRR")]
     [Route("olprr")]
@@ -20,10 +16,10 @@ namespace OlprrApi.Controllers
         private readonly ILogger<IncidentReportingController> _logger;
         private readonly IIncidentReportingService _olprrService;
 
-        public IncidentReportingController(ILogger<IncidentReportingController> logger, IIncidentReportingService olprrService)
+        public IncidentReportingController(ILogger<IncidentReportingController> logger, IIncidentReportingService incidentReportingService)
         {
             _logger = logger;
-            _olprrService = olprrService;
+            _olprrService = incidentReportingService;
         }
 
         [Route("confirmationtype")]
@@ -132,10 +128,10 @@ namespace OlprrApi.Controllers
 //        private readonly ILogger<IncidentReportingController> _logger;
 //        private readonly IIncidentReportingService _olprrService;
 
-//        public IncidentReportingController(ILogger<IncidentReportingController> logger, IIncidentReportingService olprrService)
+//        public IncidentReportingController(ILogger<IncidentReportingController> logger, IIncidentReportingService incidentReportingService)
 //        {
 //            _logger = logger;
-//            _olprrService = olprrService;
+//            _olprrService = incidentReportingService;
 //        }
 
 //        [Route("confirmationtype")]

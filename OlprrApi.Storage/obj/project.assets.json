@@ -5236,11 +5236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git\\net\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj",
+      "projectUniqueName": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj",
       "projectName": "OlprrApi.Storage",
-      "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj",
+      "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Storage\\OlprrApi.Storage.csproj",
       "packagesPath": "C:\\Users\\nquan\\.nuget\\packages\\",
-      "outputPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Storage\\obj\\",
+      "outputPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Storage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5259,11 +5259,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\git\\net\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj": {
-              "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj"
+            "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj": {
+              "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Common\\OlprrApi.Common.csproj"
             },
-            "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj": {
-              "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj"
+            "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj": {
+              "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj"
             }
           }
         }

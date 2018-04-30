@@ -4197,11 +4197,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj",
+      "projectUniqueName": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj",
       "projectName": "OlprrApi.Models",
-      "projectPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj",
+      "projectPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\OlprrApi.Models.csproj",
       "packagesPath": "C:\\Users\\nquan\\.nuget\\packages\\",
-      "outputPath": "E:\\git\\net\\OlprrApi\\OlprrApi.Models\\obj\\",
+      "outputPath": "E:\\Visual Studio 2017\\HOL\\OlprrApi\\OlprrApi.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

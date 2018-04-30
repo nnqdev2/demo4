@@ -5,7 +5,7 @@ using Dto = OlprrApi.Models.Request;
 
 namespace OlprrApi.Storage.Repositories
 {
-    public interface IOlprrRpository
+    public interface IOlprrRepository
     {
         Task<IEnumerable<ConfirmationType>> GetConfirmationTypes();
         Task<IEnumerable<County>> GetCounties();
@@ -19,7 +19,5 @@ namespace OlprrApi.Storage.Repositories
         Task<int> InsertOLPRRIncidentRecord(ApOLPRRInsertIncident apOLPRRInsertIncident);
         //Task<IEnumerable<ApOLPRRGetLustLookup>> GetApOLPRRGetLustLookups(Dto.LustSiteAddressSearch lustSiteAddressSearch);
         Task GetApOLPRRGetLustLookups(Dto.LustSiteAddressSearch lustSiteAddressSearch);
-        Task<IEnumerable<ApOLPRRGetLustLookup>> GetLustSearch(Dto.LustSiteAddressSearch lustSiteAddressSearch);
-
     }
 }

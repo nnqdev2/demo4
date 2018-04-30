@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using Dto = OlprrApi.Models.Request;
+using System;
 
 namespace OlprrApi.Storage.Repositories
 {
@@ -149,6 +151,76 @@ namespace OlprrApi.Storage.Repositories
             list.Add(new SqlParameter("@DEQ_OFFICE", apOLPRRInsertIncident.DeqOffice));
             IEnumerable<SqlParameter> myParams = list;
             return myParams;
+        }
+
+        //public async Task<IEnumerable<ApOLPRRGetLustLookup>> GetApOLPRRGetLustLookups(Dto.LustSiteAddressSearch lustSiteAddressSearch)
+        public async Task GetApOLPRRGetLustLookups(Dto.LustSiteAddressSearch lustSiteAddressSearch)
+        {
+
+            lustSiteAddressSearch.SiteAddress = "";
+            lustSiteAddressSearch.SiteName = "";
+            lustSiteAddressSearch.SiteZip = "97229";
+            int spResult = 9999;
+            IList<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@SiteName", lustSiteAddressSearch.SiteName));
+            list.Add(new SqlParameter("@SiteAddress", lustSiteAddressSearch.SiteAddress));
+            list.Add(new SqlParameter("@SiteCity", lustSiteAddressSearch.SiteCity));
+            list.Add(new SqlParameter("@SiteZip", lustSiteAddressSearch.SiteZip));
+            list.Add(new SqlParameter("@OrderBy", lustSiteAddressSearch.OrderBy));
+            list.Add(new SqlParameter { ParameterName = "@Result", SqlDbType = SqlDbType.SmallInt, Direction = ParameterDirection.Output, Value = spResult });
+
+            IEnumerable<SqlParameter> myParams = list;
+
+
+            
+            var result = await _dbContext.Database.ExecuteSqlCommandAsync("execute dbo.apOLPRRGetLustLookup " +
+                "  @SiteName, @SiteAddress, @SiteCity, @SiteZip,  @OrderBy, @Result OUTPUT", myParams);
+
+            var test = spResult;
+
+            //https://stackoverflow.com/questions/18510901/return-multiple-recordsets-from-stored-proc-in-c-sharp
+            //https://stackoverflow.com/questions/43688324/why-does-ef-core-always-return-1-with-this-stored-procedure
+            //https://stackoverflow.com/questions/45252959/entity-framework-core-using-stored-procedure-with-output-parameters
+            //var sql = "exec spTestSp @ParamIn1, @ParamIn2, @ParamOut1 OUT, @ParamOut2 OUT";
+            //var result = db.Database.ExecuteSqlCommand(sql, in1, in2, out1, out2);
+
+            //var out1Value = (long)out1.Value;
+            //var out2Value = (string)out2.Value;
+        }
+
+        public async Task<IEnumerable<ApOLPRRGetLustLookup>> GetLustSearch(Dto.LustSiteAddressSearch lustSiteAddressSearch)
+        {
+
+            //lustSiteAddressSearch.SiteAddress = "";
+            //lustSiteAddressSearch.SiteName = "";
+            //lustSiteAddressSearch.SiteZip = "97229";
+
+            var siteNameParam = new SqlParameter("@SiteName", lustSiteAddressSearch.SiteName);
+            var siteAddressParam = new SqlParameter("@SiteAddress", lustSiteAddressSearch.SiteAddress);
+            var siteCityParam = new SqlParameter("@SiteCity", lustSiteAddressSearch.SiteCity);
+            var siteZipParam= new SqlParameter("@SiteZip", lustSiteAddressSearch.SiteZip);
+            var orderByParam = new SqlParameter("@OrderBy", lustSiteAddressSearch.OrderBy);
+
+            if (siteNameParam.Value == null)
+                siteNameParam.Value = DBNull.Value;
+            if (siteAddressParam.Value == null)
+                siteAddressParam.Value = DBNull.Value;
+            if (siteCityParam.Value == null)
+                siteCityParam.Value = DBNull.Value;
+            if (siteZipParam.Value == null)
+                siteZipParam.Value = DBNull.Value;
+
+            const string ExecuteApOLPRRGetLustLookup = "execute dbo.apOLPRRGetLustLookup @SiteName, @SiteAddress, @SiteCity" +
+                ", @SiteZip, @OrderBy, @Result OUTPUT";
+
+            var x = await _dbContext.Set<ApOLPRRGetLustLookup>().AsNoTracking().FromSql(ExecuteApOLPRRGetLustLookup
+                , siteNameParam, siteAddressParam, siteCityParam, siteZipParam, orderByParam
+                , new SqlParameter { ParameterName = "@Result", SqlDbType = SqlDbType.SmallInt, Direction = ParameterDirection.Output }
+                ).ToListAsync();
+
+            var z = x;
+
+            return x;
         }
 
     }

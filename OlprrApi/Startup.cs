@@ -25,18 +25,18 @@ namespace OlprrApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
-            });
-
             //services.AddCors(options =>
             //{
-            //    options.AddPolicy("AllowAllHeaders",
-            //        builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
-            //        );
+            //    options.AddPolicy("AllowSpecificOrigin",
+            //        builder => builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
             //});
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllHeaders",
+                    builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
+                    );
+            });
 
             //services.AddMvc();
             services.AddMvc(options =>
@@ -58,6 +58,7 @@ namespace OlprrApi
 
             services.AddScoped<IOlprrRpository, OlprrRepository>();
             services.AddScoped<IIncidentReportingService, IncidentReportingService>();
+            services.AddScoped<IOlprrReviewService, OlprrReviewService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

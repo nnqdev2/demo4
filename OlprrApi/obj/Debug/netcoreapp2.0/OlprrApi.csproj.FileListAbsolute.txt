@@ -17,22 +17,3 @@ E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.Ass
 E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.csproj.CopyComplete
 E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.dll
 E:\Visual Studio 2017\HOL\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.pdb
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\NLog.config
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.deps.json
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.runtimeconfig.json
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.runtimeconfig.dev.json
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.dll
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.pdb
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.Common.dll
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.Models.dll
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.Storage.dll
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.Common.pdb
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.Models.pdb
-E:\git\net\OlprrApi\OlprrApi\bin\Debug\netcoreapp2.0\OlprrApi.Storage.pdb
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.csprojResolveAssemblyReference.cache
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.csproj.CoreCompileInputs.cache
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.AssemblyInfoInputs.cache
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.AssemblyInfo.cs
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.csproj.CopyComplete
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.dll
-E:\git\net\OlprrApi\OlprrApi\obj\Debug\netcoreapp2.0\OlprrApi.pdb
